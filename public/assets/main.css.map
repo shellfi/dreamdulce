@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","mappings":"AAAA,EACE,UAEA,IACE,c","sources":["webpack://muneca/./css/test.scss"],"sourcesContent":["* {\r\n  color: red;\r\n\r\n  a {\r\n    color: hotpink;\r\n  }\r\n}"],"names":[],"sourceRoot":""}
