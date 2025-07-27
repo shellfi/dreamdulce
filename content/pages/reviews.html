@@ -1,0 +1,17 @@
+---
+layout: review.njk
+title: reviews
+---
+
+<aside class="sub">
+  <nav class="sub-nav" aria-label="review_navigation">
+		<ul>
+    	{% for review in review_entries %}
+			<li><a href="../reviews/{{ url}}">{{ review.name }}</a></li>
+			{% endfor %}
+		</ul>
+  </nav>
+</aside>
+<main>
+	<p>click one of the things</p>
+</main>

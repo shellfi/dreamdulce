@@ -1,5 +1,3 @@
-const markdownIt = require("markdown-it");
-
 module.exports = function (eleventyConfig) {
   // This makes the eleventy command quieter (with less detail)
   eleventyConfig.setQuietMode(true);
@@ -21,14 +19,16 @@ module.exports = function (eleventyConfig) {
     "json",
   ]);
 
-  // markdown stuff
-
-  const md = new markdownIt({
-    html: true
+  
+  eleventyConfig.addCollection("blogPosts", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("/reviews*.{html,md}").sort((a, b) => {
+      return b.date - a.date; // Sort in reverse chronological order (newest first)
+    });
   });
-
-  eleventyConfig.addPairedShortcode("markdown", (content) => {
-    return md.render(content);
+  
+  // Add date filter for RSS
+  eleventyConfig.addFilter("dateToRfc822", function(date) {
+    return new Date(date).toUTCString();
   });
 
   // This defines the input and output directories

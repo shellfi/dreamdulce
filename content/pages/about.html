@@ -3,17 +3,16 @@ layout: dreamdulce.njk
 title: index
 ---
 
-
 <aside class="sub">
-  <div class="sub-content">
+  <nav class="sub-nav" aria-label="sub-content">
     
-	</div>
+  </nav>
 </aside>
 <main>
 	<div id="last-rev">
 		<h2>latest review</h2>
-		{% assign latest_post = collection.reviews | first %}
-		{% if latest_post %}
-		{% endif %}
+		{% for review[0] in review_entries %}
+		{{ artist }}
+		{% endfor %}
 	</div>
 </main>
