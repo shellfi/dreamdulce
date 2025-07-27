@@ -1,0 +1,23 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Album Reviews</title>
+		<description>Album reviews by me, Dulce</description>
+		<link>https://dreamdulce.neocities.org</link>
+		<lastBuildDate>{{ collections.reviews[0].date | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+		<ttl>1440</ttl>
+
+		{% for review in collections.reviews %}
+  	<item>
+    	<title>{{ review.data.title }}</title>
+    	<description>{{ review.data.description }}</description>
+    	<link>https://dreamdulce.neocities.org{{ review.url }}</link>
+    	<pubDate>{{ review.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+  	</item>
+  	{% endfor %}
+	</channel>
+</rss>

@@ -20,8 +20,8 @@ module.exports = function (eleventyConfig) {
   ]);
 
   
-  eleventyConfig.addCollection("blogPosts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("/reviews*.{html,md}").sort((a, b) => {
+  eleventyConfig.addCollection("reviews", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("/public/reviews*.{html,md}").sort((a, b) => {
       return b.date - a.date; // Sort in reverse chronological order (newest first)
     });
   });
