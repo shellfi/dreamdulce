@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../assets/main.css{{ nocache }}" />
+  </head>
+  <body class="h-full w-full flex justify-center align-center">
+    <div class="main-container grid">
+      <div class="header-area h-full w-full">
+        <header>
+          <h1>XXXXX's Album Reviews</h1>
+          <!-- i will add an image here -->
+        </header>
+      </div>
+      <nav class="main-nav" aria-label="main navigation">
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">reviews</a></li>
+          <li><a href="#">about</a></li>
+        </ul>
+      </nav>
+      <aside class="archive-tab">
+        <nav class="review-nav" aria-label="review navigation">
+
+        </nav>
+      </aside>
+      <main>
+          {{ content | safe }}
+      </main>
+    </div>
+  </body>
+</html>

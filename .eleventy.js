@@ -1,3 +1,5 @@
+const markdownIt = require("markdown-it");
+
 module.exports = function (eleventyConfig) {
   // This makes the eleventy command quieter (with less detail)
   eleventyConfig.setQuietMode(true);
@@ -18,6 +20,16 @@ module.exports = function (eleventyConfig) {
     "xml",
     "json",
   ]);
+
+  // markdown stuff
+
+  const md = new markdownIt({
+    html: true
+  });
+
+  eleventyConfig.addPairedShortcode("markdown", (content) => {
+    return md.render(content);
+  });
 
   // This defines the input and output directories
   return {
