@@ -19,18 +19,6 @@ module.exports = function (eleventyConfig) {
     "json",
   ]);
 
-  // Add a collection for blog posts
-  eleventyConfig.addCollection("blogPosts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("/content/reviews/*.{html,md}").sort((a, b) => {
-      return b.date - a.date; // Sort in reverse chronological order (newest first)
-    });
-  });
-  
-  // Add date filter for RSS
-  eleventyConfig.addFilter("dateToRfc822", function(date) {
-    return new Date(date).toUTCString();
-  });
-
   // This defines the input and output directories
   return {
     dir: {
