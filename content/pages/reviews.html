@@ -6,8 +6,8 @@ title: reviews
 <aside class="sub">
   <nav class="sub-nav" aria-label="review_navigation">
 		<ul>
-    	{% for review in review_entries %}
-			<li><a href="../reviews/{{ url}}">{{ review.name }}</a></li>
+    	{% for revin review_entries %}
+			<li><a href="../reviews/{{ rev.url }}">{{ rev.name }}</a></li>
 			{% endfor %}
 		</ul>
   </nav>
