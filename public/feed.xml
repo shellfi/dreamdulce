@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-  <title>Your Feed Title</title>
-  <description>DescriptionOfYourBlog</description>
+  <title>Dulce's Album Reviews</title>
+  <description>Where I review albums occasionally</description>
   <link>https://dreamdulce.neocities.org</link>
-  <lastBuildDate>07-27-2025</lastBuildDate>
   <ttl>1440</ttl>
 
   
+  <item>
     <title>DON&#39;T TAP THE GLASS</title>
     <description>My ratings of Tyler, the Creator&#39;s newest album</description>
     <link>https://dreamdulce.neocities.org/reviews/dont-tap-the-glass</link>
     <pubDate>07-27-2025</pubDate>
   </item>
   
+  <item>
     <title>Thunder, Lightning, Strike</title>
     <description>My thoughts on The Go! Team&#39;s debut album</description>
     <link>https://dreamdulce.neocities.org/reviews/thunder-lightning-strike</link>
