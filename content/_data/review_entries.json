@@ -1,4 +1,14 @@
 [
-	{ "name": "DON'T TAP THE GLASS", "artist": "Tyler, the Creator", "url": "dont-tap-the-glass", "date": "07-27-2025" },
-	{ "name": "Thunder, Lightning, Strike", "artist": "The Go! Team", "url": "thunder-lightning-strike", "date": "07-26-2025"}
+	{
+		"name": "DON'T TAP THE GLASS", 
+		"url": "dont-tap-the-glass", 
+		"date": "07-27-2025", 
+		"desc": "My ratings of Tyler, the Creator's newest album"
+	},
+	{
+		"name": "Thunder, Lightning, Strike",
+		"url": "thunder-lightning-strike",
+		"date": "07-26-2025",
+		"desc": "My thoughts on The Go! Team's debut album"
+	}
 ]

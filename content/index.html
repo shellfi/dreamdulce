@@ -10,10 +10,19 @@ title: index
 	</div>
 </aside>
 <main>
-	<div id="last-rev">
-		<h2>latest review</h2>
-		{% assign latest_post = collection.reviews | first %}
-		{% if latest_post %}
-		{% endif %}
-	</div>
+	<h2>Latest Review</h2>
+	<div class="blog-posts-container">
+	<ul>
+	{% assign latest_post = collections.reviews | first %}
+	{% if latest_post %}
+		<li>
+			<a href="{{ latest_post.url }}">
+			{{ latest_post.date | date: "%Y-%m-%d" }}: {{ latest_post.data.title }}
+			</a>
+		</li>
+		{% else %}
+		<li>No blog posts yet!</li>
+	{% endif %}
+	</ul>
+</div>
 </main>

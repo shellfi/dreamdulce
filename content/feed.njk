@@ -1,0 +1,22 @@
+---
+permalink: "/feed.xml"
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Your Feed Title</title>
+  <description>DescriptionOfYourBlog</description>
+  <link>https://dreamdulce.neocities.org</link>
+  <lastBuildDate>{{ review_entries[0].date }}</lastBuildDate>
+  <ttl>1440</ttl>
+
+  {% for rev in review_entries %}
+    <title>{{ rev.name }}</title>
+    <description>{{ rev.desc }}</description>
+    <link>https://dreamdulce.neocities.org/reviews/{{ rev.url }}</link>
+    <pubDate>{{ rev.date }}</pubDate>
+  </item>
+  {% endfor %}
+</channel>
+</rss>

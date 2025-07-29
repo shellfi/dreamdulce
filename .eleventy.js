@@ -19,9 +19,9 @@ module.exports = function (eleventyConfig) {
     "json",
   ]);
 
-  
-  eleventyConfig.addCollection("reviews", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("/public/reviews*.{html,md}").sort((a, b) => {
+  // Add a collection for blog posts
+  eleventyConfig.addCollection("blogPosts", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("/content/reviews/*.{html,md}").sort((a, b) => {
       return b.date - a.date; // Sort in reverse chronological order (newest first)
     });
   });
