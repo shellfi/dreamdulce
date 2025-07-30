@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="../assets/main.css{{ nocache }}" />
+    <link rel="stylesheet" href="{{ nesting }}/assets/main.css{{ nocache }}" />
   </head>
   <body class="h-full w-full flex justify-center align-center">
     <div class="main-container grid">
@@ -16,9 +16,9 @@
       </div>
       <nav class="main-nav h-full w-full" aria-label="main navigation">
         <ul>
-          <li><a href="#"">home</a></li>
-          <li><a href="./pages/reviews">reviews</a></li>
-          <li><a href="./pages/about">about</a></li>
+          <li><a href="/index.html">home</a></li>
+          <li><a href="{{ nesting }}pages/reviews"></a></li>
+          <li><a href="{{ nesting }}pages/about">about</a></li>
         </ul>
       </nav>
       <aside class="sub h-full w-full">

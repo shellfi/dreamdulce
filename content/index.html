@@ -1,6 +1,7 @@
 ---
 layout: dreamdulce.njk
 title: index
+nesting: "../"
 ---
 
 <aside class="sub">
@@ -15,7 +16,7 @@ title: index
 	{% assign latest_post = review_entries[0] %}
 	{% if latest_post %}
 		<li>
-			<a href="{{ latest_post.url }}">
+			<a href="/reviews/{{ latest_post.url }}">
 			{{ latest_post.date }}: {{ latest_post.name }}
 			</a>
 		</li>
