@@ -1,3 +1,67 @@
 header {
 	height: 200px;
 }
+
+.main-wrapper {
+	height: max-content;
+	max-width: 50rem;
+}
+
+.main-container {
+	grid-template-areas:
+		"header header header header"
+		"nav nav nav nav"
+		"sub main main main"
+		"sub main main main"
+		"footer footer footer footer";
+	grid-template-columns: repeat(auto-fit, calc(100% / 4));
+	grid-template-rows: 200px 100px repeat(2, 1fr), 125px;
+	gap: 2rem;
+}
+
+.grid-child {
+	height: 100%;
+	width: 100%;
+	border: 1px solid red;
+}
+
+.grid-child > * {
+	border: 1px solid blue;
+}
+
+.grid-child-one {
+	grid-area: header;
+}
+
+.grid-child-two {
+	grid-area: nav;
+}
+
+.grid-child-three {
+	grid-area: sub;
+	padding-right: 1rem;
+}
+
+.grid-child-four {
+	grid-area: main;
+	margin-top: -2rem;
+}
+
+.grid-child-five {
+	grid-area: footer;
+}
+
+.main-nav {
+	padding: 1rem 0;
+
+	ul {
+		list-style: none;
+		justify-content: space-around;
+	}
+}
+
+.sub {
+	height: 300px;
+	overflow: auto;
+}
+

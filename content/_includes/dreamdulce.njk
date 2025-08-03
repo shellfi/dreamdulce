@@ -7,28 +7,53 @@
     <link rel="stylesheet" href="{{ nesting }}assets/main.css{{ nocache }}" />
   </head>
   <body class="h-full w-full flex justify-center align-center">
-    <div class="main-container grid">
-      <div class="header-area h-full w-full">
-        <header>
-          <h1>Dulce's Album Reviews</h1>
-          <!-- i will add an image here -->
-        </header>
-      </div>
-      <nav class="main-nav h-full w-full" aria-label="main navigation">
-        <ul>
-          <li><a href="/index.html">home</a></li>
-          <li><a href="{{ page_nesting }}reviews">reviews</a></li>
-          <li><a href="{{ page_nesting }}about">about</a></li>
-        </ul>
-      </nav>
-      <aside class="sub h-full w-full">
-        <div class="sub-content">
-          <p>Cupcake ipsum dolor sit amet gummies. Chocolate cake liquorice muffin gingerbread candy canes oat cake caramels. Chupa chups halvah chocolate cake jelly-o tiramisu chocolate bar chocolate cake macaroon lemon drops. Jujubes toffee gummies icing lemon drops I love. Pudding muffin dessert powder jujubes marshmallow dragée I love dragée. Shortbread lollipop lemon drops shortbread gummies pudding I love muffin. Cake toffee I love powder jelly. Cupcake jelly chocolate danish jelly-o dragée I love sesame snaps chupa chups. Toffee soufflé liquorice bonbon jelly-o I love cake fruitcake. I love chocolate I love bear claw topping cupcake.</p>
+    <div class="main-wrapper">
+      <div class="main-container w-full grid">
+        <div class="grid-child grid-child-one">
+          <div class="header-area h-full w-full">
+            <header>
+              <h1>Dulce's Album Reviews</h1>
+              <!-- i will add an image here -->
+            </header>
+          </div>
         </div>
-      </aside>
-      <main>
-      {{ content | safe }}
-      </main>
+        <div class="grid-child grid-child-two">
+          <nav class="main-nav h-full w-full" aria-label="main navigation">
+            <ul class="flex align-center">
+              <li><a href="/index.html">home</a></li>
+              <li><a href="{{ page_nesting }}reviews">reviews</a></li>
+              <li><a href="{{ page_nesting }}about">about</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="grid-child grid-child-three">
+          <aside class="sub h-full w-full">
+            <div class="sub-content">
+              <p>
+                Cupcake ipsum dolor sit amet gummies. Chocolate cake liquorice
+                muffin gingerbread candy canes oat cake caramels. Chupa chups
+                halvah chocolate cake jelly-o tiramisu chocolate bar chocolate
+                cake macaroon lemon drops. Jujubes toffee gummies icing lemon
+                drops I love. Pudding muffin dessert powder jujubes marshmallow
+                dragée I love dragée. Shortbread lollipop lemon drops shortbread
+                gummies pudding I love muffin. Cake toffee I love powder jelly.
+                Cupcake jelly chocolate danish jelly-o dragée I love sesame
+                snaps chupa chups. Toffee soufflé liquorice bonbon jelly-o I
+                love cake fruitcake. I love chocolate I love bear claw topping
+                cupcake.
+              </p>
+            </div>
+          </aside>
+        </div>
+        <div class="grid-child grid-child-four">
+          <main>
+            {{ content | safe }}
+          </main>
+        </div>
+        <div class="grid-child grid-child-five">
+          <footer>hi</footer>
+        </div>
+      </div>
     </div>
   </body>
 </html>

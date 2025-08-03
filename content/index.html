@@ -5,14 +5,8 @@ nesting: "./"
 page_nesting: "./pages/"
 ---
 
-<aside class="sub">
-  <div class="sub-content">
-    
-	</div>
-</aside>
-<main>
-	<h2>Latest Review</h2>
-	<div class="blog-posts-container">
+<h2>Latest Review</h2>
+<div class="blog-posts-container">
 	<ul>
 	{% assign latest_post = review_entries[0] %}
 	{% if latest_post %}
@@ -26,4 +20,3 @@ page_nesting: "./pages/"
 	{% endif %}
 	</ul>
 </div>
-</main>
