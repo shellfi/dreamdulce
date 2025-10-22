@@ -1,21 +1,36 @@
 /* mainly global styles */
 
+@font-face {
+  font-family: "Irish Grover";
+  src: url("./fonts/IrishGrover-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Chelsea Market";
+	src: url("./fonts/ChelseaMarket-Regular.ttf") format("truetype");
+}
+
 :root {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 a {
-    color: blue;
+  color: blue;
 }
 
 body {
-    background-color: lightblue;
-    padding: 2rem 0;
+	font-family: "Chelsea Market";
+  background-color: white;
+  padding: 2rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Irish Grover";
 }
 

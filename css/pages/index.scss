@@ -33,17 +33,31 @@ header {
 	grid-area: header;
 }
 
+.grid-child-one .header-area header {
+	width: 80%;
+	border: green 1px solid;
+}
+
 .grid-child-two {
 	grid-area: nav;
 }
 
+.grid-child-two nav {
+	width: 80%;
+	margin: 0 auto;
+}
+
 .grid-child-three {
 	grid-area: sub;
-	padding-right: 1rem;
+}
+
+.grid-child-three > * {
+	margin-left: -2rem;
 }
 
 .grid-child-four {
 	grid-area: main;
+	border: 1px solid red;
 	margin-top: -2rem;
 }
 
@@ -65,3 +79,7 @@ header {
 	overflow: auto;
 }
 
+.stars {
+	width: 100%;
+	height: auto;
+}
